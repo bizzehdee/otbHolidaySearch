@@ -1,4 +1,4 @@
-namespace otbHolidaySearch.Data;
+namespace otbHolidaySearch.Models;
 
 public class HotelDataObject
 {

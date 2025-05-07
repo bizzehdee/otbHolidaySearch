@@ -1,6 +1,7 @@
 namespace otbHolidaySearch.Data;
 
-public class IDataLoader
+public interface IDataLoader<out T>
+    where T : class
 {
-    
+    IEnumerable<T> LoadData(string filePath);
 }

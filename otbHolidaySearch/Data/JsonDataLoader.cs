@@ -1,16 +1,16 @@
 namespace otbHolidaySearch.Data;
 
-public class JsonDataLoader<T>
+public class JsonDataLoader<T> : IDataLoader<T>
     where T : class
 {
     public IEnumerable<T> LoadData(string filePath)
     {
-        var data = new List<T>();
+        List<T> data;
 
         using (var reader = new StreamReader(filePath))
         {
             var json = reader.ReadToEnd();
-            data = JsonConvert.DeserializeObject<List<T>>(json);
+            data = System.Text.Json.JsonSerializer.Deserialize<List<T>>(json);
         }
 
         return data;

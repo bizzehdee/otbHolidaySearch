@@ -1,4 +1,4 @@
-﻿namespace otbHolidaySearch;
+﻿namespace otbHolidaySearch.Models;
 
 public class HolidaySearch
 {
